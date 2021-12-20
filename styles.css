@@ -1,0 +1,301 @@
+:root{
+    --sky-blue-crayola: rgba(45, 225, 252, 1);
+    --medium-spring-green: rgba(42, 252, 152, 1);
+    --malachite: rgba(9, 232, 94, 1);
+    --emerald: rgba(22, 193, 114, 1);
+    --deep-jungle-green: rgba(33, 79, 75, 1);
+}
+html{
+    width:100vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body, html{
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+}
+caption{
+
+    font-weight: bold;
+}
+
+/* ---------------- NAV ------------- */
+.headerDiv{
+    height: fit-content;
+    margin-bottom: 20px;
+}
+#mainTitle{
+    color: black;
+    font-size: 30px;
+    padding: 5px;
+    display: flex;
+    border-radius: 5px;
+    background-color:rgba(42, 252, 152, 1);
+    margin:0px;
+}
+.navDiv {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    margin: 0px;
+    padding: 10px 5px;
+    list-style: none;
+    background-color:rgba(22, 193, 114, 1);
+}
+#firstItem{
+    margin-left: auto;
+}
+.navDiv a{
+    display: flex;
+    border-radius: 10px;
+    width: 18%;
+    min-width: fit-content;
+    padding: 10px;
+    color: black;
+    height: fit-content;
+    font-size: 1.5rem;
+    margin: 2px;
+    transition: background-color 1.5s;
+}
+
+.navDiv a:hover{
+    background-color:rgba(33, 79, 75, 0.8);
+}
+
+@media (max-width: 845px)
+{
+    #firstItem{
+        margin-left: 0px;
+    }
+    #mainTitle{
+        display: flex;
+        margin: 0px;
+        align-self: center;
+    }
+    .navDiv{
+        flex-direction: column;
+        align-self: stretch;
+        align-items: center;
+    }
+
+}
+@media (max-width: 445px)
+{
+    .navDiv{
+        flex-direction: column;
+        align-self: stretch;
+        align-items: center;
+    }
+    #mainTitle{
+        display:flex;
+    }
+    .navDiv a{
+        width: 100%;
+    }
+    .section{
+        height: fit-content;
+    }
+    .sectionColumn{
+        height: 600px;
+    }
+}
+/* ----------------- body ------------*/
+.section
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin: 0px;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    padding: 10px 10px 0px 0px;
+}
+.sectionColumn
+{
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+}
+.sectionText{
+    padding: 30px;
+    position: absolute;
+    letter-spacing: 1px;
+}
+#sectionImage1{
+    background-image: url('/images/BanffSign.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+    vertical-align: middle;
+    object-fit: cover;
+}
+#sectionImage2{
+    background-image: url('/images/JasperSign.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+    vertical-align: middle;
+    background-size: cover;
+}
+#sectionImage3{
+    background-image: url('/images/KananaskisCountySign.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+    vertical-align: middle;
+    object-fit: cover;
+   }
+
+.sectionS{
+    align-items: center;
+    text-align: left;
+}
+/*-------------- table------------*/
+#tableTitle{
+    align-content: center;
+    font-size: 2vw;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+table{
+    margin: auto;
+    table-layout: fixed;
+    width: 90%;
+    border-spacing: 0.5rem;
+    margin-bottom: 100px;
+}
+tr{
+    font-size: 1.25vw;
+}
+td{ 
+    padding: 0.5rem; 
+    text-align: center;
+    font-size: 1vw;
+}
+.hardHike{
+    background-color:rgba(236, 30, 30, 0.3)
+}
+.moderateHike{
+    background-color: rgba(255, 166, 0, 0.25)
+}
+.easyHike{
+    background-color: rgba(14, 201, 14, 0.25)
+}
+@media (max-width: 800px){
+    table{
+        display: none;
+    }
+}
+/*--------------Hike Sections--------*/
+.hikes{
+    display: flex;
+    flex-direction: column;
+}
+.hikeSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px 50px 0px 0px;
+}
+.hikePhoto{
+    width:50%;
+    /* min-width: 600px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.hikeImage{
+    flex-shrink: 5;
+    min-width: 95%;
+    min-height: 100%;
+    margin: 10px;
+}
+.hikeTitle{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.65);
+    color:rgb(6, 71, 4);
+    top: 30px;
+    right:5%;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight:bolder;
+    font-size: 1.5vw;
+}
+.hikeContent{
+    width: 50%;
+}
+.linkButtons{
+    display: flex;
+}
+.infoLink{
+    color: black;
+    font-size: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding:1em;
+    background-color:rgba(9, 232, 94, 0.3);
+    flex-grow: 1;
+    margin: 0 0 5px 5px;
+}
+h3{
+    font-size: 25px;
+    text-align: center;
+}
+.hikeParagraph{
+    letter-spacing: 0.5px;    
+    text-align: justify;
+    padding: 0 0 5px 5px;
+}
+.hikeDetails{
+    letter-spacing: 0.5px;
+    font-size:20px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+@media (max-width: 600px){
+    .infoLink{
+        font-size: 3vw;
+    }
+    .hikeDetails{
+        font-size: 2.5vw;
+    }
+    h3{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1400px){
+    .hikePhoto{
+        width:100%;
+        justify-content: center;
+    }
+    .hikeContent{
+        width:100%;
+        height: fit-content;
+        margin: 10px;
+        align-content: center;
+    }
+    .hikeTitle{
+        font-size: 3vw;
+    }
+
+}
+
+/* ------------- footer ----------*/
+.footerDiv {
+    background-color: rgba(30, 165, 100, 0.7);
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    max-height: 100px;
+    position: fixed;
+    bottom:0px;
+    margin-top: 300px;
+}
+.footerText{
+    color: white;
+    font-size: 10px;
+}
